@@ -1,0 +1,19 @@
+{ 
+  "builds": [ 
+    { 
+      "src": "public", 
+      "use": "@railway/php", 
+      "config": { 
+        "phpVersion": "8.3", 
+        "documentRoot": "public", 
+        "extensions": ["mysqli"] 
+      } 
+    } 
+  ], 
+  "routes": [ 
+    { 
+      "src": "/.*", 
+      "dest": "/public/index.php" 
+    } 
+  ] 
+} 
