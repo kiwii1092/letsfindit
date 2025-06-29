@@ -1,19 +1,19 @@
-{ 
-  "builds": [ 
-    { 
-      "src": "public", 
-      "use": "@railway/php", 
-      "config": { 
-        "phpVersion": "8.3", 
-        "documentRoot": "public", 
-        "extensions": ["mysqli"] 
-      } 
-    } 
-  ], 
-  "routes": [ 
-    { 
-      "src": "/.*", 
-      "dest": "/public/index.php" 
-    } 
-  ] 
-} 
+{
+  "builds": [
+    {
+      "src": "/",
+      "use": "@railway/php",
+      "config": {
+        "phpVersion": "8.2",
+        "documentRoot": ".",
+        "extensions": ["mysqli", "pdo_mysql"]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "/index.php"
+    }
+  ]
+}
